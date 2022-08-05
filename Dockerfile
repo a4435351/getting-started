@@ -3,7 +3,7 @@
 FROM python:alpine AS base
 WORKDIR /app
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 FROM node:12-alpine AS app-base
 WORKDIR /app
